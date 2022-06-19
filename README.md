@@ -1,19 +1,19 @@
-# golang-demo
+# golang-docker-demo
 
 ## Init project golang:
 
 ```bash
-go mod init golang-demo
+go mod init golang-docker-demo
 ```
 
 ## Build Images
 
 ```bash
-docker build -t golang-demo .
+docker build -t golang-docker-demo .
 ```
 
 ## Run container 
 
 ```bash
-docker run --name   golang-demo -p 8100:8100 -h 0.0.0.0 golang-demo 
+docker run --name   golang-docker-demo -p 8100:8100 -h 0.0.0.0 golang-docker-demo 
 ```
