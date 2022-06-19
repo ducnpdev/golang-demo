@@ -1,4 +1,4 @@
-# golang-docker-demo
+# golang-demo
 
 ## Init project golang:
 
