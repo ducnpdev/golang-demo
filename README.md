@@ -3,17 +3,17 @@
 ## Init project golang:
 
 ```bash
-go mod init golang-docker-demo
+go mod init golang-demo
 ```
 
 ## Build Images
 
 ```bash
-docker build -t golang-docker-demo .
+docker build -t golang-demo .
 ```
 
 ## Run container 
 
 ```bash
-docker run --name   golang-docker-demo -p 8100:8100 -h 0.0.0.0 golang-docker-demo 
+docker run --name   golang-demo -p 8100:8100 -h 0.0.0.0 golang-demo 
 ```
