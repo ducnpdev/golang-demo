@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"golang-docker-demo/handler"
+	redislocal "golang-docker-demo/redis"
 	"log"
 	"net/http"
 )
@@ -16,9 +18,10 @@ var (
 )
 
 func main() {
-	http.HandleFunc("/ping", func(w http.ResponseWriter, req *http.Request) {
-		w.Write([]byte(fmt.Sprintf("ping ok %s", ServiceName)))
-	})
+	redislocal.InitRedis()
+	http.HandleFunc("/set", handler.Set)
+	http.HandleFunc("/get", handler.Get)
+
 	fmt.Println("start service with port: ", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
